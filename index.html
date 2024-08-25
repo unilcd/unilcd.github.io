@@ -250,6 +250,42 @@
 
     <section class="section">
     <div class="container">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+             We develop a policy for dynamic local and cloud resource allocation to optimize energy efficiency and 
+            real-time performance. We achieve this through a formulation of the navigation task, imitation learning 
+            for local and cloud navigation policies, and Proximal Policy Optimization (PPO) for a sample-efficient 
+            routing policy with a multi-objective reward system. 
+
+            <ol>
+              <li><b> Cloud and Local Policies</b>: We use a standard imitation learning with L1 error minimization 
+            approach to train navigation policies offline by collecting a diverse dataset from CARLA, featuring complex 
+            routes and weather conditions. Both local and cloud policies are developed with shared visual features and 
+            goal-conditional modules, where the local policy uses a smaller, optimized version of the pre-trained cloud 
+            policy, reducing computational costs.</li>
+
+              <li><b> Routing Policy </b>: We introduce a routing policy that optimally balances local and cloud computing 
+              resources using Proximal Policy Optimization (PPO), where the state space includes image embeddings and action 
+              history, and the action space is binary for selecting between local or cloud navigation. Our reward function 
+              integrates geodesic alignment, speed, energy efficiency, action clipping, and collision penalties to improve 
+              optimization and task performance, with specific penalties for sub-optimal actions and collisions to ensure 
+              effective and safe navigation.</li>
+            </ol>
+          </div>
+          <div class="content has-text-justified">
+          Here is a comprehensive summary of our algorithm.
+          </div>
+          <div class="column">
+            <img src="./resources/Method.png" width="80%" />
+          </div>
+        </div>
+      </div>
+    
+    <section class="section">
+    <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Result</h2>
@@ -281,6 +317,8 @@
       </div>
     </div>
   </section>
+
+
     
     <!-- Paper video. -->
     <br />
