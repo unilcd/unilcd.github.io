@@ -168,18 +168,50 @@
         <div class="column is-two-thirds">
           <h2 class="title is-3">Data Details</h2>
           <div class="content has-text-justified">
-            <p>
-              Images : This folder consists of the front-view images 
-              collected from an ego-walker's perspective in CARLA.
-            </p>
-            <br />
-            <p>
-              Info : This folder consists of numpy array with 7 columns. 
+              The dataset has been collected while navigating through eight 
+            predefined routes in the Carla simulation. It includes images 
+            captured from the perspective of our ego walker, as well as 
+            detailed information about their actions and locations throughout 
+            the routes. Below is a brief overview of its contents and structure:
+              <ul>
+                <li>Images: The images folder contains a series of visuals captured 
+                  from the perspective of the ego walker. Each image provides a 
+                  first-person view of the walker’s journey, offering a detailed 
+                  depiction of the surrounding environment and context.</li>
+                <li>Info: This info folder consists of numpy array with 7 columns. 
               The first 2 corresponds to the actions taken by the expert. 
               The 3rd column indicates presence(1)/absence(0) of pedestrian 
               in its visible range. The following  2 represents the current 
               location of the expert and the last two are the closest next 
-              path point to the expert.
+              path point to the expert.</li>
+              </ul>
+            </p>
+          Directory Organization of BlindWays:
+            <ul>
+              <p>
+              <li>UniLCD
+                <ul>
+                  <li>Images
+                    <ul>
+                      <li>1.jpg</li>
+                      <li>2.jpg</li>
+                      <li>...</li>
+                      <li>10.jpg</li>
+                      <li>...</li>
+                    </ul>
+                  </li>
+                  <li>Info
+                    <ul>
+                      <li>1.npy</li>
+                      <li>2.npy</li>
+                      <li>...</li>
+                      <li>10.jpg</li>
+                      <li>...</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
             </p>
           </div>
         </div>
